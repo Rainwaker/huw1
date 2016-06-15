@@ -8,19 +8,19 @@
           <div>
 
           <FONT SIZE=20px>
-          
+
           <h1 style="color:lightblue">Welcome to Huw's Website</h1>
-          
+
           </FONT>
 
           </div>
 
           <div>
-          
+
           <h2><FONT SIZE=16px>About Huw</FONT></h2>
-          
+
           <FONT SIZE=5px>
-          
+
           <p>Huw was born in Bodelwyddan, North Wales. He went to school in Abergele and recently graduated from Cambridge University with a degree in Psychology.</p>
 
           <p>Inspired by a work experience placement, Huw has been volunteering with charities for the visually impaired since school. His main roles have included befriending, running social and walking groups, and providing admin support at a drop-in resource centre.</p>
@@ -29,7 +29,8 @@
 
           </FONT>
 
-          
+<br><br>
+
           </div>
 
           <div>
@@ -40,6 +41,17 @@
 
           </div>
 
+<br><br>
+
+          <div>
+
+          <h2><FONT SIZE=16px>Huw's Adventures</FONT></h2>
+          {% for Experience in experiences %}
+              <p><FONT SIZE=9px><a href="">{{ Experience.title}}</FONT><a/></p>
+              <p><FONT SIZE=2px>published: {{ Experience.Published_Date }}</FONT></p>
+              <p style="color:#B6B6B4"><FONT SIZE=3px>Type: {{ Experience.type }}</FONT></p>
+              <p><FONT SIZE=5px>{{ Experience.description|linebreaks }}</FONT></p>
+          {% endfor %}
           </FONT>
 
       </body>
